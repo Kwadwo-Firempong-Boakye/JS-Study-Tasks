@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Password Checker</title>
+    <style>
+        body{
+            background: #232529;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            color: white;
+            font-size: 25px;
+        }
+        h4{
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: lightpink;
+        }
+
+        button{
+            font-family: sans-serif;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 30px rgb(244, 163, 198);
+            border: none;
+            font-size: 20px;
+            transition: 0.6s;
+            background-color: lightpink;
+
+        }
+
+        button:hover{
+            transform: translate(5px, -5px);
+            padding: 12px;
+            background-color: rgb(240, 169, 240);
+        }
+
+    </style>
+</head>
+<body>
+    <h4>Find exercise instructions <a href="https://javascript.info/task/check-login" target="_blank">here</a>.</h4>
+    <img src="/Check-Login Schema.png" alt="check-login schema guide" width="450">
+    <p>Basic Password If Statement</p>
+    <button onclick="login()">Click To Login</button>
+
+    <script>
+        const login = () => {
+
+            let username = prompt("Who's there?");
+
+            if (username=="Admin") {
+
+                let passCode = prompt("Enter password");
+
+                if (passCode == "TheMaster") {
+                    alert("Welcome");
+                } else if (passCode == null){
+                    alert("Cancelled");
+                } else {
+                    alert("Wrong password");
+                }
+                
+            } else if (username == null) {
+                alert("Cancelled");
+            } else {
+                alert("I don't know you");
+            }
+        }
+    </script>
+</body>
+</html>
